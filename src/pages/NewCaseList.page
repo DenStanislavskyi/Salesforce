@@ -1,0 +1,16 @@
+<apex:page controller="NewCaseListController">
+    <apex:form >
+        <apex:pageBlock title="Case List" id="Case_list">
+            <!-- Case_list -->
+         <apex:repeat value="{!NewCases}" var="case">
+         <table style="width:1000px;">
+<tr>
+            <span style="margin-left:20px"> </span><apex:outputLink value="{!case.Id}" style="width:160px">{!case.Id}</apex:outputLink>
+            <span style="margin-left:20px"> </span><apex:outputLink value="{!Case.CaseNumber}" style="width:160px" >{!case.CaseNumber}</apex:outputLink>
+             <br/>
+           </tr>
+           </table>
+        </apex:repeat>     
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
